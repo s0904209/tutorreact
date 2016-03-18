@@ -13,19 +13,26 @@
     <div id="content"></div>
 
     <script type="text/jsx">
+
         var AllenComponent = React.createClass({
+
+            doSomething: function() {
+               alert("Ths text displaying is "+ this.props.children);
+            },
+
             render: function() {
-            return (
-            	<div>
-                   <h2>{this.props.user}</h2>
-                   <p>{this.props.children}</p>
-                </div>
-           );	
-       }
-   });
- 
+                return (
+                    <div>
+                       <h2>{this.props.user}</h2>
+                       <p>{this.props.children}</p>
+                       <a onClick={this.doSomething} href="#/kobe">click me</a>
+                    </div>
+                );
+            }
+        });
+
    React.render(
-   	    <div>
+        <div>
    	       <AllenComponent user="bucky">This guy is awesome</AllenComponent>
            <AllenComponent user="sally">she smells like mints</AllenComponent>
 
