@@ -16,17 +16,17 @@
         var AllenComponent = React.createClass({
             render: function() {
             return (
-               <h2> I like to eat {this.props.food}</h2>
+               <h2> {this.props.user} like to eat {this.props.food}</h2>
            );	
        }
    });
  
    React.render(
    	    <div>
-   	       <AllenComponent food="bacon"/>
-           <AllenComponent food="tuna" />
-   	       <AllenComponent food="beef" />
-           <AllenComponent food="ham"  />
+   	       <AllenComponent user="bucky" food="bacon"/>
+           <AllenComponent user="sally" food="tuna" />
+   	       <AllenComponent user="emily" food="beef" />
+           <AllenComponent user="tony" food="ham"  />
         </div>
    	    ,document.getElementById('content'));
 
