@@ -16,19 +16,21 @@
         var AllenComponent = React.createClass({
             render: function() {
             return (
-               <h2> {this.props.user} like to eat {this.props.food}</h2>
+            	<div>
+                   <h2>{this.props.user}</h2>
+                   <p>{this.props.children}</p>
+                </div>
            );	
        }
    });
  
    React.render(
    	    <div>
-   	       <AllenComponent user="bucky" food="bacon"/>
-           <AllenComponent user="sally" food="tuna" />
-   	       <AllenComponent user="emily" food="beef" />
-           <AllenComponent user="tony" food="ham"  />
-        </div>
-   	    ,document.getElementById('content'));
+   	       <AllenComponent user="bucky">This guy is awesome</AllenComponent>
+           <AllenComponent user="sally">she smells like mints</AllenComponent>
+
+        </div>,
+   	    document.getElementById('content'));
 
    </script>
 
